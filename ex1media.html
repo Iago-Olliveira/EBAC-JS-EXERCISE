@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Média</title>
+    <style>
+        body {
+            background-color: rgb(178, 189, 83);
+            color: black;
+            font: normal 20pt Arial;
+        }
+
+        input, button {
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CÁLCULO DE MÉDIAS</h1>
+    <h1>DISCIPLINA: <strong>Matemática</strong></h1>
+
+    <p>Digite as 3 notas para calcular a média</p>
+    <input type="number" id="mat_nota1">
+    <input type="number" id="mat_nota2">
+    <input type="number" id="mat_nota3">
+
+    <button onclick="media_mat()">
+        Calcular Média - Matemática
+    </button>
+
+    <div id="resultado_mat">
+
+    </div>
+    
+    <script>
+        
+        function media_mat() {
+
+            let nota1 = parseFloat(document.getElementById('mat_nota1').value);
+            let nota2 = parseFloat(document.getElementById('mat_nota2').value);
+            let nota3 = parseFloat(document.getElementById('mat_nota3').value);
+
+            let media = (nota1 + nota2 + nota3) / 3;
+
+            document.getElementById('resultado_mat').innerHTML = 'Média em Matemática é: ' + media.toFixed(1);
+
+        }
+       
+    </script>
+</body>
+</html>
